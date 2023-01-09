@@ -18,6 +18,7 @@ library(lubridate)
 
 ## 1. Case Study Description
 
+
 The following document is a record of the steps that I’ve taken in doing
 a case study over the *fictional* company Cyclistic, which offers a bike
 sharing service. We’ll be attempting to answer the question of how
@@ -31,6 +32,7 @@ Divvy bicycle sharing service The license to use this public dataset can
 be found [here](https://ride.divvybikes.com/data-license-agreement)
 
 ## 2. Importing and Combining the Data
+
 
 After downloading the last twelve months worth of data from the source,
 the data has to be imported into R. Using RStudio’s Desktop version,
@@ -82,11 +84,13 @@ can proceed with combining the twelve months into one yearly data set.
 
 ``` r
 Yearly_Summary <- bind_rows(
-  Dec_2021, Jan_2022, Feb_2022, Mar_2022, Apr_2022, May_2022, Jun_2022, Jul_2022, Aug_2022, Sep_2022, Oct_2022, Nov_2022
+  Dec_2021, Jan_2022, Feb_2022, Mar_2022, Apr_2022, May_2022, Jun_2022, 
+  Jul_2022, Aug_2022, Sep_2022, Oct_2022, Nov_2022
   )
 ```
 
 ## 3. Preparing the Data
+
 
 ### Converting Formats
 
@@ -172,6 +176,7 @@ Yearly_Summary$ToD <- format(
 ```
 
 ## 4. Cleaning the Data
+
 
 ### Removing instances of rides with time less than 0
 
